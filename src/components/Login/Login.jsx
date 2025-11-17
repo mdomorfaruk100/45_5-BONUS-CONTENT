@@ -24,7 +24,9 @@ const Login = () => {
 
     const handleGoogleSignIn = () => {
         signInWithGoogle().then(res => {
-            handleResponse(res, true);
+            if(res){
+                handleResponse(res, true);
+            }
         })
     }
 

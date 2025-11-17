@@ -1,10 +1,12 @@
 import firebase from "firebase/compat/app";
 import 'firebase/compat/auth';
 import firebaseConfig from './firebaseConfig';
-
-export const initializeFirebaseApp = () => {
+console.log('this file is loaded');
+// export const initializeFirebaseApp = () => {
      firebase.initializeApp(firebaseConfig);
-}
+// }
+
+export const initializeFirebaseApp = () => {}
 
 export const signInWithGoogle = () => {
      const provider = new firebase.auth.GoogleAuthProvider();
@@ -20,7 +22,6 @@ export const signInWithGoogle = () => {
                }
                return signedInUser;
           }).catch(error => {
-               console.log(error);
                console.log(error.message);
           })
 }

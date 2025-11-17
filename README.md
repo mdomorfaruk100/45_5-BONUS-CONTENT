@@ -1,16 +1,15 @@
-# React + Vite
+# 45_5-1 How to Publish a React application in Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## go to firebase base project on firebase website. And to to hosting option and click on get started button.
 
-Currently, two official plugins are available:
+## npm install -g firebase-tools -> is used to install firebase-tools command as global package. to host our project on firebase.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## firebase login -> command is to login in firebase with cmd
 
-## React Compiler
+## firebase init -> command is to initialize as firebase project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## firebase deploy -> command is to deploy our project on firebase hosting.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# if we update our application. 
+## 1st we need to rebuild our project by using 'npm run build' command.
+## then we will run 'firebase deploy' command.
