@@ -1,0 +1,152 @@
+.complete-container {
+    display: flex;
+    align-items: center;
+    height: 75vh;
+    justify-content: space-between;
+    gap: 250px;
+}
+
+.complete-container .map-container {
+    height: 90%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.map-container img {
+    height: 100%;
+    width: auto;
+}
+
+.user-container {
+    width: 500px;
+    height: fit-content;
+    max-height: 100%;
+    background: #f4f4f4;
+    flex: 1;
+    padding: 0 30px;
+    padding-bottom: 30px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.user-container img {
+    margin-left: 32px;
+    margin-top: 25px;
+    margin-bottom: 7px;
+}
+
+.location-box {
+    display: flex;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.dot-content {
+    position: relative;
+    width: 24px;
+}
+
+.dot-content hr {
+    height: 60%;
+    width: 2px;
+    color: orangered;
+    background: orangered;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 7px;
+    top: 6px;
+}
+
+.dot-content::after,
+.dot-content::before {
+    content: '';
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    background-color: orangered;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.dot-content::after {
+    bottom: 34px;
+}
+
+.dot-content::before {
+    top: 5px;
+}
+
+.info-content h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.info-content p {
+    color: #8e8b8b;
+    margin-top: 5px;
+}
+
+.time-box h1 {
+    font-weight: 600;
+    margin: 16px 0 4px;
+}
+
+.time-box p {
+    color: #8e8b8b;
+    margin-bottom: 10px;
+}
+
+.user-box {
+    width: 100%;
+}
+
+.user {
+    display: flex;
+    gap: 16px;
+    background: white;
+    width: 100%;
+    height: 100%;
+    padding: 12px 0;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+
+
+.user .user-image img {
+    height: 80px;
+    margin: 0;
+    margin-left: 12px;
+}
+
+.user .user-info h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.user-container button{
+    width: 100%;
+    margin-top: 30px;
+    background-color: orangered;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}

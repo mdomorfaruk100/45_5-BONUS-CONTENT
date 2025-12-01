@@ -1,0 +1,27 @@
+.food-container{
+    width: 300px;
+    text-align: center;
+    margin: 20px 15px;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.food-container:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.food-info h3{
+    font-size: 17px;
+    font-size: 400;
+}

@@ -1,0 +1,26 @@
+.foods{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.disable-button {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 20px;
+    background-color: #cccccc;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+.disable-button:hover{
+    border: none;
+    outline: none;
+}
+
+.active-button{
+    background-color: orangered;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+}

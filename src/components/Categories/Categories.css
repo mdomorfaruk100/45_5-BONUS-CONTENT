@@ -1,0 +1,18 @@
+.categories{
+    text-align: center;
+}
+
+.categories a{
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.categories a.active{
+    content: '';
+    padding-bottom: 5px;
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}

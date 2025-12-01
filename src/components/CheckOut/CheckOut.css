@@ -1,0 +1,65 @@
+.left-container, .right-container{
+    width: 50%;
+    margin-top: 85px;
+}
+
+.checkout-container{
+    display: flex;
+  gap: 310px;
+  padding: 0 50px;
+}
+
+.sec-title::after{
+    content: '';
+    display: block;
+    border-bottom: 2px solid rgb(58, 58, 58);
+    margin-bottom: 40px;
+}
+
+.sec-title{
+    width: 100%;
+}
+
+.sec-title h1{
+    font-weight: 600;
+    margin-bottom: 21px;
+}
+
+.ship-form{
+    width: 100%;
+}
+
+.ship-form form input, .ship-form form textarea{
+    display: block;
+    width: calc(100% - 28px);
+    border: none;
+    outline: none;
+    padding: 18px 14px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    background-color: rgb(227, 232, 237);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+input::placeholder{
+    font-weight: 500;
+}
+
+.ship-form form button[type="submit"]{
+    background: orangered;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    margin: auto;
+    padding: 18px;
+}
+
+.delivery-info p{
+    margin-bottom: 9px;
+}

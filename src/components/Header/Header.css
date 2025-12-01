@@ -1,0 +1,41 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item{
+    margin-left: 24px;
+}
+
+.btn {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 8px 28px;
+}
+
+.btn-signup, .btn-login{
+    background-color: orangered;
+    color: white;
+    border-radius: 100px !important;
+    -webkit-border-radius: 100px !important;
+    -moz-border-radius: 100px !important;
+    -ms-border-radius: 100px !important;
+    -o-border-radius: 100px !important;
+}
+
+.btn-login {
+    background:none;
+    color: black;
+    border: 1px solid gray;
+    padding:  7px 28px;
+}
+
+.btn:hover{
+    border-color: gray;
+}
+
+.cart-icon {
+    font-size: 21px;
+}
