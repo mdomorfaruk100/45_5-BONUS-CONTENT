@@ -3,12 +3,14 @@ import { Link, useLocation } from 'react-router';
 
 const Categories = () => {
     const location = useLocation();
+    const category = location.state || 'lunch';
+    console.log(category);
     return (
         <div className='container'>
             <div className="categories">
-                <Link to='/breakfast' className={(location.pathname === '/breakfast') ? 'active' : ''}>Breakfast</Link>
-                <Link to='/lunch' className={(location.pathname === '/' || location.pathname === '/lunch') ? 'active' : ''}>Lunch</Link>
-                <Link to='/dinner' className={location.pathname === '/dinner'  ? 'active' : ''}>Dinner</Link>
+                <Link to='/' state={'breakfast'} className={(category === 'breakfast') ? 'active' : ''}>Breakfast</Link>
+                <Link to='/' state={'lunch'} className={(category === 'lunch') ? 'active' : ''}>Lunch</Link>
+                <Link to='/' state={'dinner'} className={category === 'dinner' ? 'active' : ''}>Dinner</Link>
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import data from '../../fakeData/data';
 import Food from '../Food/Food';
 import './Foods.css';
 import { useContext } from 'react';
-import { CartContext } from '../../App';
+import { CartContext } from '../../context/CartProvider';
 
 const Foods = () => {
     let { category } = useParams();
