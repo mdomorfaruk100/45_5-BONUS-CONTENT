@@ -2,15 +2,16 @@
     text-align: center;
 }
 
-.categories a{
+.categories span{
     text-decoration: none;
     color: black;
     font-size: 19px;
     font-weight: 600;
     margin-left: 40px;
+    cursor: pointer;
 }
 
-.categories a.active{
+.categories span.active{
     content: '';
     padding-bottom: 5px;
     color: orangered;

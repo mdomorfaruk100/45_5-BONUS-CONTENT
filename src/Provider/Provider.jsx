@@ -2,13 +2,16 @@ import React from 'react';
 import UserProvider from '../context/UserProvider';
 import CartProvider from '../context/CartProvider';
 import LocationProvider from '../context/LocationProvider';
+import CategoryProvider from '../context/CategoryProvider';
 
-const Provider = ({children}) => {
+const Provider = ({ children }) => {
     return (
         <UserProvider>
             <CartProvider>
                 <LocationProvider>
-                    {children}
+                    <CategoryProvider>
+                        {children}
+                    </CategoryProvider>
                 </LocationProvider>
             </CartProvider>
         </UserProvider>

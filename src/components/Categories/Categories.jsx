@@ -1,16 +1,25 @@
+import { useContext, useEffect } from 'react';
 import './Categories.css';
-import { Link, useLocation } from 'react-router';
+import { useLocation } from 'react-router';
+import { CategoryContext } from '../../context/CategoryProvider';
 
 const Categories = () => {
     const location = useLocation();
-    const category = location.state || 'lunch';
-    console.log(category);
+    const [category, setCategoryContext] = useContext(CategoryContext);
+
+    useEffect(() => {
+            setCategoryContext(location.state || 'lunch');
+    }, []);
+
+    const handleCategory = category => {
+        setCategoryContext(category);
+    }
     return (
         <div className='container'>
             <div className="categories">
-                <Link to='/' state={'breakfast'} className={(category === 'breakfast') ? 'active' : ''}>Breakfast</Link>
-                <Link to='/' state={'lunch'} className={(category === 'lunch') ? 'active' : ''}>Lunch</Link>
-                <Link to='/' state={'dinner'} className={category === 'dinner' ? 'active' : ''}>Dinner</Link>
+                <span onClick={() => handleCategory('breakfast')} className={category === 'breakfast' ? 'active' : ''}>Breakfast</span>
+                <span onClick={() => handleCategory('lunch')} className={category === 'lunch' ? 'active' : ''}>Lunch</span>
+                <span onClick={() => handleCategory('dinner')} className={category === 'dinner' ? 'active' : ''}>Dinner</span>
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartProvider';
-import { useNavigate, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import data from '../../fakeData/data';
 import './FoodDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,7 +12,6 @@ const FoodDetail = () => {
     const [cart, setCart] = useContext(CartContext);
     const [food] = useState(data.find(food => food.id === Number(id)));
     const [quantity, setQuantity] = useState(1);
-    const navigate = useNavigate();
 
     const handleQuantity = (type) => {
         console.log(type);
@@ -31,19 +30,11 @@ const FoodDetail = () => {
         console.log(food);
     }
 
-    const onNavigate = state => {
-        navigate('/', { state: state  });
-    }
+ 
 
     return (
         <>
-            <div className="container">
-                <div className="categories">
-                    <span onClick={() => onNavigate('breakfast')}>Breakfast</span>
-                    <span onClick={() => onNavigate('lunch')}>Lunch</span>
-                    <span onClick={() => onNavigate('dinner')}>Dinner</span>
-                </div>
-            </div>
+           
             <div className="container">
                 <div className='detail-container'>
                     <div className="food-info">

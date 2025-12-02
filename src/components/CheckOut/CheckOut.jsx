@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { CartContext } from '../../App';
+import React, { useContext } from 'react';
+import { CartContext } from '../../context/CartProvider';
 import { useForm } from 'react-hook-form';
 import './CheckOut.css';
 import Cart from '../Cart/Cart';

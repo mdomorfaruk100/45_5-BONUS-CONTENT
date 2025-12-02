@@ -4,18 +4,18 @@ import Food from '../Food/Food';
 import './Foods.css';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartProvider';
+import { CategoryContext } from '../../context/CategoryProvider';
 
 const Foods = () => {
-    let { category } = useParams();
+    const [category] = useContext(CategoryContext);
     const navigate = useNavigate();
     const [cart] = useContext(CartContext)
-    if (!category) {
-        category = 'lunch';
-    }
     const foods = data.filter(food => food.category === category);
+
     const handleCheckOut = () => {
         navigate('/checkout');
     }
+
     return (
         <div className='container'>
             <div className='foods'>
@@ -24,8 +24,8 @@ const Foods = () => {
                     foods.map(food => <Food key={food.id} food={food} />)
                 }
             </div>
-            <div style={{display:'flex', justifyContent:'center'}}>
-            <button onClick={handleCheckOut}  className={cart.length > 0 ? 'active-button' : 'disable-button'}>Checkout Your Food</button>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <button onClick={handleCheckOut} className={cart.length > 0 ? 'active-button' : 'disable-button'}>Checkout Your Food</button>
             </div>
         </div>
     );
